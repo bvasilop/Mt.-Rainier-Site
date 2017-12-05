@@ -112,3 +112,8 @@ ul {
 .text-center {
     text-align: center;
 }
+/*--------Header center for small screen sizes--------*/
+@media (max-width: 1199px) and (min-width: 300px){
+     h1 {
+        text-align: center;
+      }
