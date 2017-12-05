@@ -73,7 +73,7 @@ blockquote {
 dl {
 	margin: 2em 0;
 	padding: 0;
-    width: 20em;
+    width: auto;
 }
 dt {
 	background-color: #0b486b;
