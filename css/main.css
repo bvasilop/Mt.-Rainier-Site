@@ -4,74 +4,37 @@
 /* ------body elements------*/
  body {
    font-family: 'Source Sans Pro', 'Open Sans', sans-serif;
-   font-size: 18px;
+   font-size: 19px;
    padding: 0;
    margin: 0;
-   background-color: #edeeef;
+   background-color: #cee4fb;
  }
 /* ------nav bar elements------*/
- nav ul {
-   text-align: right;
-   margin: 0;
- }
-
- .navbar-toggle{
- z-index: 10;
- }
-
- .navbar-brand {
-   position: absolute;
-   left: 43%;
-   display: block;
-   padding-top: 5px;
- }
-
- .navbar .nav>li>a {
-    font-size: 15px;
-    line-height: 22px;
-    font-weight: 500;
-    text-transform: uppercase;
+.nav-tabs{
+    border-bottom: 1px solid #a78b16;
 }
-
- .navbar .navbar-brand {
-   font-family: 'Sanchez', 'Montserrat', sans-serif;
-   padding-top: 22px;
-    font-size: 27px;
- }
- .navbar .navbar-brand .logo {
-   z-index: auto;
-    position: absolute;
-    object-fit: cover;
-    width: 100%;
-    max-height: 500px;
-    object-position: 50% 50%;
-    top: 3px;
-    left: 623px;
-    width: 212.7px;
-    height: 56.6px;
-    opacity: 0.9;
+.navbar .nav>li>a {
+    font-family: 'Source Sans Pro','Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
 }
-
- .navbar-nav.nav-justified > li{
-   float:none;
- }
-
- #nav-list a {
-   text-align: center;
- }
 
  /* ------body elements------*/
 #map-container { height: 400px; }
 
+a {
+    color: #6b0e3c;
+}
+
 /* ------jumbotron elements------*/
 .jumbotron {
-  background-color: #edeeef;
+  background-color: #cee4fb;
   padding-top: 100px;
 }
 
 .jumbotron h1, .jumbotron .h1 {
-  font-family: 'Sanchez', 'Montserrat', sans-serif;
-  font-size: 46px;
+    font-family: 'Sanchez', 'Montserrat', sans-serif;
+    font-size: 46px;
 }
 
 /* ------carousel images------*/
@@ -82,49 +45,70 @@
     height: 100%;
 }
 .img-full {
-  object-fit: cover;
-  width: 100%;
-  max-height: 500px;
-  object-position: 50% 50%;
+    object-fit: cover;
+    width: 100%;
+    max-height: 500px;
+    object-position: 50% 50%;
 }
 
 /* ------home class elements------*/
 .home {
-  display: block;
-  margin: auto;
+    display: block;
+    margin: auto;
 }
 
 /* ------blockquote elements------*/
 blockquote {
-  border: none;
+    border: none;
+    font-size: 19px;
 }
 
 /* ------tabs styling------*/
 .tab-content h2 {
-  font-family: 'Montserrat', sans-serif;
-  color: #e87a30;
+    font-family: 'Montserrat', sans-serif;
+    color: #752f00;
 }
 
 /* ------description list elements------*/
+dl {
+	margin: 2em 0;
+	padding: 0;
+    width: 20em;
+}
 dt {
-  font-weight: bold;
-  text-decoration: underline;
-  }
+	background-color: #0b486b;
+	color: #959289;
+	padding: .5em;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	border-left: 1px solid #131210;
+	border-right: 1px solid #131210;
+	border-top: 1px solid #131210;
+}
+
 
 dd {
-  margin: 0;
-  padding: 0 0 0.5em 0;
-  }
+	margin: 0 0 1em 0;
+	background: #fff8f0;
+	text-align: center;
+	padding: 1em .5em;
+	font-style: italic;
+	border-left: 1px solid #131210;
+	border-right: 1px solid #131210;
+	border-bottom: 1px solid #131210;
+}
+
 
 /* ------unordered list styling------*/
 ul {
-  list-style-type: none;
-  list-style-position:inside;
-  margin:0;
-  padding:0;
+    list-style-type: none;
+    list-style-position:inside;
+    margin:0;
+    padding:0;
 }
 
 /* ------text center class------*/
 .text-center {
-  text-align: center;
+    text-align: center;
 }
