@@ -3,11 +3,11 @@
    ========================================================================== */
 /* ------body elements------*/
  body {
-   font-family: 'Source Sans Pro', 'Open Sans', sans-serif;
-   font-size: 19px;
-   padding: 0;
-   margin: 0;
-   background-color: #cee4fb;
+     font-family: 'Source Sans Pro', 'Open Sans', sans-serif;
+     font-size: 19px;
+     padding: 0;
+     margin: 0;
+     background-color: #cee4fb;
  }
 /* ------nav bar elements------*/
 .nav-tabs{
@@ -23,13 +23,16 @@
 #map-container { height: 400px; }
 
 a {
-    color: #6b0e3c;
+    color: #05750f;
+}
+a:hover {
+    color: #752f00;
 }
 
 /* ------jumbotron elements------*/
 .jumbotron {
-  background-color: #cee4fb;
-  padding-top: 100px;
+    background-color: #cee4fb;
+    padding-top: 100px;
 }
 
 .jumbotron h1, .jumbotron .h1 {
@@ -114,6 +117,6 @@ ul {
 }
 /*--------Header center for small screen sizes--------*/
 @media (max-width: 1199px) and (min-width: 300px){
-     h1 {
+h1 {
         text-align: center;
-      }
+}
