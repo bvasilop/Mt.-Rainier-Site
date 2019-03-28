@@ -111,13 +111,13 @@ marker.on('mouseleave', function (e) {
     marker.bindPopup('<b>Crystal Mountain</b><br>Elevation: 7,002 ft (2,134 m)<br><a href="https://crystalmountainresort.com/" target="_blank">Visit Crystal Mountain Ski Resort</a>');
 
 // tabs for viewing each section of content individually
-    $('#tab-buttons a').click(function (e) {
+$('#tab-buttons a').click(function (e) {
   e.preventDefault()
   $(this).tab('show')
 });
 
   // will run once DOM is ready for JS to execute
-   $(document).ready(function(){
+$(document).ready(function(){
    // Add smooth scrolling to all links
    $("a").on('click', function(event) {
 
