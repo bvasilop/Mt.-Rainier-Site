@@ -10,7 +10,8 @@ $(document).ready(function(){
 
 
 // create a variable for and add coordinates for Mt. Rainier map within the map-container div
-var map = L.map('map-container').setView([46.843, -121.670], 9);
+var map = L.map('map-container').setView([46.843, -121.670], 11);
+map.scrollWheelZoom.disable();
 
 var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 
@@ -18,38 +19,42 @@ var osmAttrib='Map data © <a href="http://openstreetmap.org">StreetMap</a> cont
 
 var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 18, attribution: osmAttrib});
 // create map for street layer using Mapbox
+
+https://api.mapbox.com/v4/mapbox.mapbox-streets-v8/1/0/0.mvt?access_token=
 var streetLayer = L.tileLayer( 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
   attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-  maxZoom: 18,
-  id: 'bvasilop.53e23efe',
-  accessToken: 'pk.eyJ1IjoiYnZhc2lsb3AiLCJhIjoiY2oxeTRyaTF6MDA3ZTMzbnUyeGU4OGU0bCJ9.tpBVd1s-paEv6otpjh2bDA'
+  maxZoom: 20,
+  scrollWheelZoom: false,
+  id: 'mapbox.mapbox-streets-v8',
+  accessToken: 'pk.eyJ1IjoiYnZhc2lsb3AiLCJhIjoiY2tiNzlnbTBkMDNpajMxczd4Z281ODdpMiJ9.4V3u4-ybBImJoRPMIJIsjw'
 });
 
 // create map for satellite layer using Mapbox
   var satLayer = L.tileLayer( 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
     maxZoom: 18,
-    id: 'bvasilop.0ed6442b',
-    accessToken: 'pk.eyJ1IjoiYnZhc2lsb3AiLCJhIjoiY2oxeTRyaTF6MDA3ZTMzbnUyeGU4OGU0bCJ9.tpBVd1s-paEv6otpjh2bDA'
+    scrollWheelZoom: false,
+    id: 'mapbox.satellite',
+    accessToken: 'pk.eyJ1IjoiYnZhc2lsb3AiLCJhIjoiY2tiNzlnbTBkMDNpajMxczd4Z281ODdpMiJ9.4V3u4-ybBImJoRPMIJIsjw'
   });
 
-// create map for drawn layer using Mapbox
-  var drawnLayer = L.tileLayer( 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+// create map for terrain layer using Mapbox
+  var terrainLayer = L.tileLayer( 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
     maxZoom: 18,
-
-    id: 'bvasilop.cd971359',
-    accessToken: 'pk.eyJ1IjoiYnZhc2lsb3AiLCJhIjoiY2oxeTRyaTF6MDA3ZTMzbnUyeGU4OGU0bCJ9.tpBVd1s-paEv6otpjh2bDA'
+    scrollWheelZoom: false,
+    id: 'mapbox.mapbox-terrain-v2',
+    accessToken: 'pk.eyJ1IjoiYnZhc2lsb3AiLCJhIjoiY2tiNzlnbTBkMDNpajMxczd4Z281ODdpMiJ9.4V3u4-ybBImJoRPMIJIsjw'
   });
 // create object for mapLayers to select which map to use within map div
 var mapLayers = {
-    "Map View": drawnLayer,
     "Satellite View": satLayer,
+    "Terrain View": terrainLayer,
     "Street View": streetLayer
 };
 
 L.control.layers(mapLayers).addTo(map);
-    drawnLayer.addTo(map);
+    satLayer.addTo(map);
 
 //show markers with popups at no fewer than 3 interesting locations.
 var marker = L.marker([46.852, -121.760]).addTo(map);
