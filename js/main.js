@@ -13,16 +13,16 @@ $(document).ready(function(){
 var map = L.map('map-container').setView([46.843, -121.670], 11);
 map.scrollWheelZoom.disable();
 
-var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+var osmUrl='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 
-var osmAttrib='Map data © <a href="http://openstreetmap.org">StreetMap</a> contributors';
+var osmAttrib='Map data © <a href="https://openstreetmap.org">StreetMap</a> contributors';
 
 var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 18, attribution: osmAttrib});
 // create map for street layer using Mapbox
 
 https://api.mapbox.com/v4/mapbox.mapbox-streets-v8/1/0/0.mvt?access_token=
 var streetLayer = L.tileLayer( 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-  attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+  attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://mapbox.com">Mapbox</a>',
   maxZoom: 20,
   scrollWheelZoom: false,
   id: 'mapbox.mapbox-streets-v8',
@@ -31,7 +31,7 @@ var streetLayer = L.tileLayer( 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}
 
 // create map for satellite layer using Mapbox
   var satLayer = L.tileLayer( 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://mapbox.com">Mapbox</a>',
     maxZoom: 18,
     scrollWheelZoom: false,
     id: 'mapbox.satellite',
@@ -40,7 +40,7 @@ var streetLayer = L.tileLayer( 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}
 
 // create map for terrain layer using Mapbox
   var terrainLayer = L.tileLayer( 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://mapbox.com">Mapbox</a>',
     maxZoom: 18,
     scrollWheelZoom: false,
     id: 'mapbox.mapbox-terrain-v2',
@@ -66,7 +66,7 @@ var marker = L.marker([46.852, -121.760]).addTo(map);
    marker.on('mouseleave', function (e) {
        this.closePopup();
    });
-   marker.bindPopup('<b>Welcome to Mt. Rainier!</b><br>This peak is 14,417 feet (4,394 m) high.<br><a href="http://visitrainier.com" target="_blank">Visit Mt. Rainier!</a>');
+   marker.bindPopup('<b>Welcome to Mt. Rainier!</b><br>This peak is 14,417 feet (4,394 m) high.<br><a href="https://visitrainier.com" target="_blank">Visit Mt. Rainier!</a>');
 // location marker for Point Success
 var marker = L.marker([46.845757, -121.767565]).addTo(map);
 // mouseover events for L.marker
@@ -77,7 +77,7 @@ var marker = L.marker([46.845757, -121.767565]).addTo(map);
    marker.on('mouseleave', function (e) {
        this.closePopup();
    });
-    marker.bindPopup('<b>Point Success</b><br>Elevation: 14,164 feet (4,300 m)<br><a href="http://peakbagger.com/peak.aspx?pid=2298" target="_blank">Point Success Info</a>');
+    marker.bindPopup('<b>Point Success</b><br>Elevation: 14,164 feet (4,300 m)<br><a href="https://peakbagger.com/peak.aspx?pid=2298" target="_blank">Point Success Info</a>');
 // location marker for Tipsoo Lake
 var marker = L.marker([46.869047, -121.517128]).addTo(map);
 // mouseover events for L.marker
@@ -88,7 +88,7 @@ var marker = L.marker([46.869047, -121.517128]).addTo(map);
   marker.on('mouseleave', function (e) {
     this.closePopup();
 });
-    marker.bindPopup('<b>Tipsoo Lake</b><br>Elevation: 5,290 ft (1,612 m)<br><a href="http://stayrainier.com/chinook-passtipsoo-lake/" target="_blank">Visit Tipsoo Lake!</a>');
+    marker.bindPopup('<b>Tipsoo Lake</b><br>Elevation: 5,290 ft (1,612 m)<br><a href="https://stayrainier.com/chinook-passtipsoo-lake/" target="_blank">Visit Tipsoo Lake!</a>');
 // location marker for Paradise
 var marker = L.marker([46.785836, -121.735372]).addTo(map);
 // mouseover events for L.marker
